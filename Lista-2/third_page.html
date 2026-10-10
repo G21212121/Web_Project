@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wrocław - Formularz, kontakt</title>
+    <meta name="description" content="Kontakt, Pobieranie i Formularz">
+    <meta name="keywords" content="Wrocław, miasto, turystyka">
+</head>
+<body>
+    <header>
+        <h1><strong>WROCŁAW</strong></h1>
+        <h2>Formularz</h2>
+    </header>
+    <nav>
+        <a href="second_page.html">poprzednia strona</a>
+    </nav>
+    <main>
+        <p></p>
+        <section>
+            <form action="#" method="POST" autocomplete="on">
+                <!-- Pola tekstowe -->
+                <label>Imię: <input type="text" name="imie" autocomplete="given-name"></label><br>
+                <label>Nazwisko: <input type="text" name="nazwisko" autocomplete="family-name"></label><br>
+                
+                <label>Miesiąc urodzin: <input list="miesiace" name="miesiac"></label><br>
+                <datalist id="miesiace">
+                    <option value="Styczeń"></option>
+                    <option value="Luty"></option>
+                    <option value="Marzec"></option>
+                    <option value="Kwiecień"></option>
+                    <option value="Maj"></option>
+                    <option value="Czerwiec"></option>
+                    <option value="Lipiec"></option>
+                    <option value="Sierpień"></option>
+                    <option value="Wrzesień"></option>
+                    <option value="Październik"></option>
+                    <option value="Listopad"></option>
+                    <option value="Grudzień"></option>
+                </datalist>
+                
+                <label>Adres mailowy: <input type="email" name="email" autocomplete="email"></label><br>
+                <label>Telefon: <input type="tel" name="telefon" autocomplete="tel"></label><br><br>
+            
+                <!-- Rozwijana lista z podlistą -->
+                <label>Wybierz ulubione miejsce:
+                    <select name="miejsce">
+                        <optgroup label="Zabytki">
+                            <option value="katedra">Katedra</option>
+                            <option value="ratusz">Ratusz</option>
+                        </optgroup>
+                        <optgroup label="Rozrywka">
+                            <option value="zoo">Zoo</option>
+                        </optgroup>
+                    </select>
+                </label><br>
+            
+                <!-- Jednokrotny wybór (radio) -->
+                <p>Czy byłeś już we Wrocławiu?</p>
+                <label><input type="radio" name="wizyta" value="tak"> Tak</label>
+                <label><input type="radio" name="wizyta" value="nie"> Nie</label><br>
+            
+                <!-- Wielokrotny wybór (checkbox) -->
+                <p>Czego szukasz w mieście?</p>
+                <label><input type="checkbox" name="cel" value="muzea"> Zabytków</label>
+                <label><input type="checkbox" name="cel" value="kluby"> Rozrywki</label><br>
+            
+                <!-- text area = 200 -->
+                <label>Zostaw wiadomość (max 200 znaków):<br>
+                    <textarea name="wiadomosc" maxlength="200" rows="4" cols="30"></textarea>
+                </label><br>
+            
+                <!-- Przyciski -->
+                <input type="reset" value="Reset">
+                <input type="submit" value="Wyślij">
+            </form>
+        </section>
+        <section>
+            <p>Kontakt: <a href="mailto:twoj@email.pl">e-mail</a></p>
+        </section>
+        <p></p>
+    </main>
+    <footer>
+        <a href="second_page.html">
+            <img src="images/next_btn_img.png" alt="Zdjęcie przycisku" width="100" style="transform: rotate(180deg);">
+        </a>
+    </footer>
+</body>
+</html>
