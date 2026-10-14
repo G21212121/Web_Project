@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Wrocław - Dodatkowe informacje</title>
@@ -11,6 +11,7 @@
         <h1><strong>WROCŁAW</strong></h1>
         <h2>Dodatkowe informacje o użytkowniku</h2>
     </header>
+
     <nav>
         <ul>
             <li><a href="starter_page.html">Strona początkowa</a></li>
@@ -18,8 +19,72 @@
             <li><a href="third_page.html">Formularz osobisty</a></li>
         </ul>
     </nav>
+
     <main>
-    
+        <!-- Panel boczny, wyróżnienie i wskaźnik-->
+        <aside>
+            <h3>Informacja o ankiecie</h3>
+            <p>Wypełniasz <mark>dodatkowy formularz</mark> preferencji turystycznych.</p>
+            <p>
+                <label>Średnia ocena Wrocławia przez turystów: </label>
+                <meter min="0" max="10" value="9.2">9.2 na 10</meter> (9.2/10)
+            </p>
+        </aside>
+
+        <!-- Zwijany blok informacyjny -->
+        <section>
+            <details>
+                <summary>Kliknij, aby dowiedzieć się więcej o celu ankiety</summary>
+                <p>Podane dane pozwolą nam lepiej dostosować polecane atrakcje Wrocławia do Twoich indywidualnych upodobań.</p>
+            </details>
+        </section>
+
+        <!-- Formularz dodatkowy z atrybutem placeholder oraz wyznaczonymi typami input -->
+        <section>
+            <h3>Formularz preferencji</h3>
+            <form action="#" method="POST">
+                <p>
+                    <label>Wyszukaj atrakcję: <br>
+                        <input type="search" name="szukaj" placeholder="np. Rynek, ZOO, Ostrów Tumski">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Wybierz ulubiony kolor przewodnika: <br>
+                        <input type="color" name="kolor_akcentu" value="#3366cc">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Planowany miesiąc przyjazdu: <br>
+                        <input type="month" name="miesiac_przyjazdu" placeholder="2026-06">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Ocena zainteresowania historią miasta (1 - min, 10 - max): <br>
+                        <input type="range" name="ocena_historii" min="1" max="10" value="5">
+                    </label>
+                </p>
+
+                <p>
+                    <label>Strona internetowa / blog turystyczny: <br>
+                        <input type="url" name="strona_www" placeholder="https://twojadomena.pl">
+                    </label>
+                </p>
+
+                <p>
+                    <input type="reset" value="Resetuj">
+                    <input type="submit" value="Wyślij formularz">
+                </p>
+            </form>
+        </section>
     </main>
+    <footer>
+        <a href="third_page.html">
+            <img src="images/next_btn_img.png" alt="Zdjęcie przycisku" width="100" style="transform: rotate(180deg);">
+        </a>
+        <p>&copy; 2026</p>
+    </footer>
 </body>
 </html>
