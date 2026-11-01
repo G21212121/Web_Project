@@ -1,0 +1,73 @@
+.main-header {
+    width: 100%;
+    background-color: white;
+
+    text-align: center;
+
+    padding: 15px 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+.main-navbar {
+}
+.main-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.main-navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.main-navbar a:hover {
+    background-color: #555;
+}
+
+/* Poziom 1*/
+.main-navbar > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+/* Poziom 2*/
+.main-navbar .poziom-2 {
+    top: 100%;
+    left: 0;
+}
+
+/* Poziom 3*/
+.main-navbar .poziom-3 {
+    top: 0;
+    left: 100%;
+}
+
+.main-navbar .poziom-2,
+.main-navbar .poziom-3 {
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    background-color: #444;
+    z-index: 101;
+}
+
+.main-navbar li:hover > ul {
+    display: block;
+}
+
+
+
+body {
+    margin-top: 100px;
+}
