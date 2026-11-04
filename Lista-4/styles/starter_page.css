@@ -6,7 +6,7 @@ article header h2 { font-size: 3em; }
 article section p { font-size: 16px; }
 footer p { font-size: 12pt; }
 
-/* 4. Różne sposoby ustawienia tła strony (pozycja, powtarzalność, ograniczanie) */
+/* 4. Różne sposoby ustawienia tła strony */
 main {
     background-color: #f8f9fa;
     background-image: url('../images/title_img.jpg');
