@@ -1,6 +1,20 @@
+body {
+    justify-items: center;
+    background-color: rgb(221 221 221);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Roboto, Arial;
+    text-align: center;
+}
+
+
+
+
 main {
-    min-width: 480px;
-    min-height: 320px;
+    width: 480px;
+    height: 320px;
+    position: relative;
 
     background-color: white;
     border: 1px solid #e1e1e1;
