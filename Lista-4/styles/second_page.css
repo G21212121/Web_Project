@@ -45,7 +45,7 @@ footer {
 #ostrow { color: #8b0000; }
 section > p { text-indent: 20px; }
 
-/* 11. Pseudoklasa :target - podświetla nagłówek po kliknięciu linku ze spisu treści */
+/* 11. Pseudoklasa (target) */
 h3:target {
     background-color: #ffe4b5;
     padding-left: 10px;

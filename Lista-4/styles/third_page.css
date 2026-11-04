@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* 7. Formatowanie tekstu i jego szerokości */
+form label {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 15px;
+    line-height: 2;
+}
+
+/* 11. Działanie pseudoklas (link, visited,hover,active) */
+a:link { color: #b31b00; }
+a:visited { color: #1a8b1c; }
+a:hover { color: #7b00ff; text-decoration: underline; }
+a:active { color: #ffa500; }
+
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #57a728;
+    outline: none;
+}
+input:checked + span, input:checked {
+    box-shadow: 0 0 5px #805300;
+}
+input:required {
+    border-left: 4px solid red;
+}
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* 11. Pseudoklasy (first-child, last-child, nth-child, nth-last-child, last-of-type) */
+form > :first-child {
+    color: #338000;
+    font-weight: bold;
+}
+
+form > :last-child {border: 2px solid darkred;}
+
+form > :nth-child(2) {
+    background-color: #1a8b1c;
+    padding: 5px;
+}
+form > :nth-last-child(2) {
+    background-color: #805300;
+    padding: 5px;
+}
+form label:last-of-type {
+    display: block;
+    margin-top: 10px;
+}
+p:empty { display: none; }

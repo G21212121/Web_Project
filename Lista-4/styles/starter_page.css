@@ -19,7 +19,7 @@ main {
 }
 footer {
     position: absolute;
-    bottom: 400px;
+    bottom: 300px;
     left: 20px;
     z-index: 10;
 }
