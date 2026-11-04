@@ -10,7 +10,7 @@ form label {
     line-height: 2;
 }
 
-/* 11. Działanie pseudoklas (link, visited,hover,active) */
+/* 11. Działanie pseudoklas (link, visited,hover,active,focus,checked,required) */
 a:link { color: #b31b00; }
 a:visited { color: #1a8b1c; }
 a:hover { color: #7b00ff; text-decoration: underline; }
@@ -31,7 +31,7 @@ input[type="radio"], input[type="checkbox"] {
     margin-right: 5px;
 }
 
-/* 11. Pseudoklasy (first-child, last-child, nth-child, nth-last-child, last-of-type) */
+/* 11. Pseudoklasy (first-child, last-child, nth-child, nth-last-child, last-of-type,empty) */
 form > :first-child {
     color: #338000;
     font-weight: bold;
