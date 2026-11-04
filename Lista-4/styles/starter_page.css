@@ -1,1 +1,33 @@
-/* do zrobienia
+@charset "UTF-8";
+
+/* 3. Różne wielkości tekstu (em, px, pt, %) */
+body { font-size: 100%; }
+article header h2 { font-size: 3em; }
+article section p { font-size: 16px; }
+footer p { font-size: 12pt; }
+
+/* 4. Różne sposoby ustawienia tła strony (pozycja, powtarzalność, ograniczanie) */
+main {
+    background-color: #f8f9fa;
+    background-image: url('../images/title_img.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll;
+    background-position: center top;
+
+    min-height: 40vh;
+}
+footer {
+    position: absolute;
+    bottom: 400px;
+    left: 20px;
+    z-index: 10;
+}
+
+/* 10. Możliwości użycia reguły @media */
+@media screen and (max-width: 800px) {
+    main {
+        background-image: none;
+        background-color: #ffffff;
+    }
+}
