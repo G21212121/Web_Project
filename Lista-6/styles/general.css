@@ -1,0 +1,9 @@
+body {
+    justify-items: center;
+    background-color: rgb(221 221 221);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Roboto, Arial;
+    text-align: center;
+}
