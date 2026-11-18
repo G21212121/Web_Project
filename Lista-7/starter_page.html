@@ -67,15 +67,52 @@
             <header>
                 <h2>Strona tytułowa</h2>
             </header>
-            <section>
-                <p></p>
-                <!--<img src="images/title_img.jpg" alt="Zdjęcie tytułowe"> -->
-                <p></p>
+
+            <div class="uklad-startowy">
+                <div class="lewa-kolumna">
+                    <section>
+                        <img src="images/title_img.jpg" alt="Zdjęcie tytułowe">
+                    </section>
+                    <section>
+                        <a href="files/przewodnik.pdf" download>Pobierz przewodnik po Wrocławiu (PDF)</a>
+                    </section>
+                </div>
+            <section class="js-panel">
+                <h3>Personalizacja stylów strony (JavaScript)</h3>
+                <p>
+                    <label for="wybor-tla">Kolor tła: </label>
+                    <select id="wybor-tla">
+                        <option value="#f8f9fa">Jasnoszary (domyślny)</option>
+                        <option value="#fff8e1">Kremowy</option>
+                        <option value="#e3f2fd">Błękitny</option>
+                        <option value="#212529">Ciemny grafit</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="wybor-tekstu">Kolor tekstu: </label>
+                    <select id="wybor-tekstu">
+                        <option value="#000000">Czarny (domyślny)</option>
+                        <option value="#1b4332">Ciemnozielony</option>
+                        <option value="#0d47a1">Granatowy</option>
+                        <option value="#ffffff">Biały</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="wybor-czcionki">Rodzaj czcionki: </label>
+                    <select id="wybor-czcionki">
+                        <option value="Arial, sans-serif">Arial (bezszeryfowa)</option>
+                        <option value="'Times New Roman', serif">Times New Roman (szeryfowa)</option>
+                        <option value="'Courier New', monospace">Courier New (stała szerokość)</option>
+                        <option value="Georgia, serif">Georgia</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="button" id="btn-zastosuj-styl">Zastosuj style</button>
+                    <button type="button" id="btn-reset-styl">Przywróć domyślne</button>
+                </p>
+                <p id="status-stylu">Wybierz parametry powyżej, aby zmienić wygląd strony.</p>
             </section>
-            <section>
-                <a href="files/przewodnik.pdf" download>Pobierz przewodnik po Wrocławiu (PDF)</a>
-                <p></p>
-            </section>
+            </div>
         </article>
     </main>
     <footer>
@@ -84,5 +121,6 @@
         </a>
         <p>&copy; 2026</p>
     </footer>
+    <script src="scripts/styles_changer.js"></script>
 </body>
 </html>
