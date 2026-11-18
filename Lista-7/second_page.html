@@ -57,7 +57,7 @@
     <main>
         <section>
             <h3 id="ostrow">Ostrów Tumski:</h3>
-            <img src="images/ostrow_img.png" alt="Zdjęcie Ostrowa Tumskiego">
+            <img src="images/ostrow_img.png" alt="Zdjęcie Ostrowa Tumskiego" name="img_ostrow" id="img_ostrow">
             <p><strong>Ostrów Tumski to najstarsza, zabytkowa część Wrocławia</strong>, która zachwyca unikalnym klimatem i gazowymi latarniami zapalanymi każdego wieczoru przez prawdziwego latarnika. Jej głównym punktem jest majestatyczna Katedra św. Jana Chrzciciela, z której wież można podziwiać wspaniałą panoramę miasta. Z kolei tuż obok znajduje się unikalny, dwupoziomowy Kościół Świętego Krzyża, będący wybitnym przykładem śląskiego gotyku. Spacer po tych historycznych uliczkach to prawdziwa podróż w czasie.</p>
         </section>
         <section>
@@ -71,6 +71,7 @@
             <p><strong>Wrocławskie krasnale to jeden z najbardziej uroczych symboli miasta</strong>, który niespodziewanie zyskał międzynarodową sławę. Te niewielkie, odlane z brązu figurki są rozsiane po całych ulicach, tworząc niezwykły szlak turystyczny idealny dla odkrywców w każdym wieku. Ich historia jest fascynująca, ponieważ początkowo krasnale malowane na murach były symbolem walki z systemem komunistycznym w ramach działań Pomarańczowej Alternatywy. Dziś we Wrocławiu można spotkać kilkaset takich skrzatów, a każdy z nich ma własne imię, atrybuty i wyjątkową historię.</p>
         </section>
         <section>
+            <a name="kotwica_zoo"></a>
             <h3 id="zoo">Zoo:</h3>
             <img src="images/zoo_img.png" alt="Zdjęcie zoo" width="500">
             <p></p>
@@ -97,7 +98,22 @@
                 </tr>
             </table>
             <p></p>
-            <a href="https://book.wroclaw-tickets.com/pl/book/26724/select/" target="_blank">Zakup biletów</a>
+           <a href="https://book.wroclaw-tickets.com/pl/book/26724/select/" target="_blank" name="link_bilety" id="link_bilety">Zakup biletów</a>
+        </section>
+        <section id="sekcja-kolekcje" class="js-panel">
+            <h3>Demonstracja kolekcji DOM (images, links, forms, anchors)</h3>
+            <form name="form_przewodnik" id="form_przewodnik" action="#">
+                <label for="wybor-atrakcji">Szybki wybór atrakcji (formularz testowy): </label>
+                <select id="wybor-atrakcji" name="atrakcja">
+                    <option value="ostrow">Ostrów Tumski</option>
+                    <option value="rynek">Rynek</option>
+                    <option value="zoo">Zoo</option>
+                </select>
+            </form>
+            <p>
+                <button type="button" id="btn-kolekcje">Odśwież analizę kolekcji DOM</button>
+            </p>
+            <div id="wynik-kolekcji"></div>
         </section>
     </main>
     <footer>
@@ -110,5 +126,6 @@
         </a>
         <p>&copy; 2026</p>
     </footer>
+    <script src="scripts/collections.js"></script>
 </body>
 </html>

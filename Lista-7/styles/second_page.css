@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* 9. Możliwości stylowania tabel */
 table {
     width: 80%;
     border-collapse: collapse;
@@ -18,14 +17,12 @@ table table tr:nth-child(2) > td:first-child {
     background-color: transparent;
 }
 
-/* 8. Reguła z atrybutami obramowania */
 table, th, td {
     border-width: 2px;
     border-style: dashed;
     border-color: #2c3e50;
 }
 
-/* 6. Box-model i pozycjonowanie  */
 section {
     clear: both;
     margin: 20px auto;
@@ -41,12 +38,24 @@ footer {
     clear: both;
 }
 
-/* 5. Selektory: identyfikatory (#), zagnieżdżenia, bezpośrednie dziecko */
 #ostrow { color: #8b0000; }
 section > p { text-indent: 20px; }
 
-/* 11. Pseudoklasa (target) */
 h3:target {
     background-color: #ffe4b5;
     padding-left: 10px;
+}
+
+.js-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #2c3e50;
+    border-radius: 6px;
+}
+
+#wynik-kolekcji {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    line-height: 1.6;
 }
