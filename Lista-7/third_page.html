@@ -57,12 +57,10 @@
     <main>
         <p></p>
         <section>
-            <form action="#" method="POST" autocomplete="on">
+            <div id="pomoc-formularza" class="help-box">Kliknij dowolne pole formularza, aby wyświetlić podpowiedź.</div>
+            <form id="formularz-osobowy" action="#" method="POST" autocomplete="on">
                 <!-- Pola tekstowe -->
-                <label>Imię: <input type="text" name="imie" autocomplete="given-name" autofocus></label> <span>(Litery, np.: Jan)</span><br>
-                <label>Nazwisko: <input type="text" name="nazwisko" autocomplete="family-name" required></label> <span>(Litery, np.: Kowalski)</span><br>
-                
-                <label>Miesiąc urodzin: <input list="miesiace" name="miesiac"></label> <span>(Wybierz z listy)</span><br>
+
                 <datalist id="miesiace">
                     <option value="Styczeń"></option>
                     <option value="Luty"></option>
@@ -77,9 +75,12 @@
                     <option value="Listopad"></option>
                     <option value="Grudzień"></option>
                 </datalist>
-                
-                <label>Adres mailowy: <input type="email" name="email" autocomplete="email" required></label> <span>(Format: xyz@domena.com)</span><br>
-                <label>Telefon: <input type="tel" name="telefon" autocomplete="tel" pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}"></label> <span>(Format: +XX XXX-XXX-XXX)</span><br><br>
+
+                <label>Imię: <input type="text" name="imie" autocomplete="given-name" data-help="Wpisz swoje imię (tylko litery, np. Jan)." autofocus></label> <br>
+                <label>Nazwisko: <input type="text" name="nazwisko" autocomplete="family-name" data-help="Wpisz swoje nazwisko — pole jest wymagane." required></label> <br>
+                <label>Miesiąc urodzin: <input list="miesiace" name="miesiac" data-help="Wybierz miesiąc urodzin z rozwijanej podpowiedzi lub wpisz ręcznie."></label> <br>
+                <label>Adres mailowy: <input type="email" name="email" autocomplete="email" data-help="Wpisz swój email w formacie xyz@domena.com" required></label> <br>
+                <label>Telefon: <input type="tel" name="telefon" autocomplete="tel" pattern="\+[0-9]{2} [0-9]{3}-[0-9]{3}-[0-9]{3}" data-help="Wpisz swój telefon w formacie +XX XXX-XXX-XXX"></label> <br><br>
             
                 <!-- Rozwijana lista z podlistą -->
                 <label>Wybierz ulubione miejsce:
@@ -128,5 +129,6 @@
         </a>
         <p>&copy; 2026</p>
     </footer>
+    <script src="scripts/form_events.js"></script>
 </body>
 </html>
