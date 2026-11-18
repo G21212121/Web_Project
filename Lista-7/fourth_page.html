@@ -77,34 +77,35 @@
         <!-- Formularz placeholder -->
         <section>
             <h3>Formularz preferencji</h3>
+            <div id="pomoc-formularza" class="help-box">Kliknij dowolne pole formularza, aby wyświetlić podpowiedź (zdarzenie focus).</div>
             <form action="#" method="POST">
                 <p>
                     <label>Wyszukaj atrakcję: <br>
-                        <input type="search" name="szukaj" placeholder="np. Rynek, ZOO, Ostrów Tumski">
+                        <input type="search" name="szukaj" placeholder="np. Rynek, ZOO, Ostrów Tumski" data-help="Wpisz nazwę wrocławskiej atrakcji, której szukasz.">
                     </label>
                 </p>
 
                 <p>
                     <label>Wybierz ulubiony kolor przewodnika: <br>
-                        <input type="color" name="kolor_akcentu" value="#3366cc">
+                        <input type="color" name="kolor_akcentu" value="#3366cc" data-help="Kliknij próbnik, aby wybrać kolor motywu przewodnika.">
                     </label>
                 </p>
 
                 <p>
                     <label>Planowany miesiąc przyjazdu: <br>
-                        <input type="month" name="miesiac_przyjazdu" placeholder="2026-06">
+                        <input type="month" name="miesiac_przyjazdu" placeholder="2026-06" data-help="Wybierz miesiąc i rok planowanej wizyty we Wrocławiu.">
                     </label>
                 </p>
 
                 <p>
                     <label>Ocena zainteresowania historią miasta (1 - min, 10 - max): <br>
-                        <input type="range" name="ocena_historii" min="1" max="10" value="5">
+                        <input type="range" name="ocena_historii" min="1" max="10" value="5" data-help="Przesuń suwak w lewo lub w prawo, aby określić poziom zainteresowania.">
                     </label>
                 </p>
 
                 <p>
                     <label>Strona internetowa / blog turystyczny: <br>
-                        <input type="url" name="strona_www" placeholder="https://twojadomena.pl">
+                        <input type="url" name="strona_www" placeholder="https://twojadomena.pl" data-help="Podaj pełny adres strony WWW zaczynający się od https://.">
                     </label>
                 </p>
                 <label>Pole zablokowane:</label>
@@ -116,6 +117,36 @@
                 </p>
             </form>
         </section>
+        <!-- Zadanie 1: Metody DOM i lista numerowana -->
+        <section class="js-panel">
+            <h3>Manipulacja listą numerowaną (DOM)</h3>
+            <p>
+                <button type="button" id="btn-append">Dodaj na koniec (appendChild)</button>
+                <button type="button" id="btn-insert">Wstaw na początek (insertBefore)</button>
+                <button type="button" id="btn-replace">Zamień pierwszy (replaceChild)</button>
+                <button type="button" id="btn-remove">Usuń ostatni (removeChild + parentNode)</button>
+            </p>
+            <ol id="lista-elementow">
+                <li>Element 1</li>
+                <li>Element 2</li>
+            </ol>
+            <p id="status-dom">Kliknij dowolny przycisk powyżej, aby zmodyfikować drzewo DOM.</p>
+        </section>
+
+        <!-- Zadanie 4: Obiekt event i zdarzenia myszy/klawiatury -->
+        <section class="js-panel">
+            <h3>Obsługa zdarzeń (mousemove, mousedown, mouseover, mouseout) i obiekt event</h3>
+            <div id="obszar-zdarzen">
+                Najedź kursorem, poruszaj myszą lub kliknij wewnątrz tego pola (przytrzymaj opcjonalnie Ctrl, Alt lub Shift).
+            </div>
+            <p>
+                <label for="pole-klawiatury">Test klawiatury (keyCode, altKey, ctrlKey, shiftKey): </label><br>
+                <input type="text" id="pole-klawiatury" placeholder="Kliknij tu i naciśnij dowolny klawisz...">
+            </p>
+            <div id="panel-event">
+                Wykonaj ruch myszą lub naciśnij klawisz, aby odczytać właściwości obiektu <code>event</code>.
+            </div>
+        </section>
     </main>
     <footer>
         <a href="third_page.html">
@@ -123,5 +154,8 @@
         </a>
         <p>&copy; 2026</p>
     </footer>
+    <script src="scripts/dom_list.js"></script>
+    <script src="scripts/events_mouse_key.js"></script>
+    <script src="scripts/form_events.js"></script>
 </body>
 </html>

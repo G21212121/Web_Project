@@ -28,14 +28,14 @@
         }
 
         boxPomocy.textContent = "Opuszczono pole \"" + (pole.name || "formularza") +
-            "\" Kliknij kolejne pole, aby wyświetlić pomoc.";
+            "\". Kliknij kolejne pole, aby wyświetlić pomoc.";
         boxPomocy.style.backgroundColor = "#fff8e1";
         boxPomocy.style.borderColor = "#f57f17";
     }
 
     function obsluzSubmit(event) {
         var e = event || window.event;
-        var potwierdzenie = window.confirm("Czy na pewno chcesz wysłać formularz osobowy?");
+        var potwierdzenie = window.confirm("Czy na pewno chcesz wysłać ten formularz?");
 
         if (!potwierdzenie) {
             if (e.preventDefault) {
@@ -59,26 +59,25 @@
         return true;
     }
 
-    function inicjalizujFormularz() {
-        var formularz = document.getElementById("formularz-osobowy");
+    function inicjalizujFormularze() {
+        var formularze = document.forms;
+        var f;
         var pola;
         var i;
 
-        if (!formularz) {
-            return;
-        }
-
-        pola = formularz.querySelectorAll("input, select, textarea");
-        for (i = 0; i < pola.length; i += 1) {
-            if (pola[i].type !== "submit" && pola[i].type !== "reset") {
-                pola[i].addEventListener("focus", obsluzFocus, false);
-                pola[i].addEventListener("blur", obsluzBlur, false);
+        for (f = 0; f < formularze.length; f += 1) {
+            pola = formularze[f].querySelectorAll("input, select, textarea");
+            for (i = 0; i < pola.length; i += 1) {
+                if (pola[i].type !== "submit" && pola[i].type !== "reset" && !pola[i].disabled) {
+                    pola[i].addEventListener("focus", obsluzFocus, false);
+                    pola[i].addEventListener("blur", obsluzBlur, false);
+                }
             }
-        }
 
-        formularz.addEventListener("submit", obsluzSubmit, false);
-        formularz.addEventListener("reset", obsluzReset, false);
+            formularze[f].addEventListener("submit", obsluzSubmit, false);
+            formularze[f].addEventListener("reset", obsluzReset, false);
+        }
     }
 
-    window.addEventListener("DOMContentLoaded", inicjalizujFormularz, false);
+    window.addEventListener("DOMContentLoaded", inicjalizujFormularze, false);
 }());
