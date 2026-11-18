@@ -35,19 +35,16 @@
     background-color: #555;
 }
 
-/* Poziom 1*/
 .main-navbar > ul > li {
     display: inline-block;
     position: relative;
 }
 
-/* Poziom 2*/
 .main-navbar .poziom-2 {
     top: 100%;
     left: 0;
 }
 
-/* Poziom 3*/
 .main-navbar .poziom-3 {
     top: 0;
     left: 100%;
