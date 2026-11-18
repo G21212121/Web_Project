@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* 6. Pozycjonowanie - absolute, fixed, left, right, top, bottom, height */
+aside {
+    position: fixed;
+    right: 0;
+    top: 280px;
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffe0;
+    border: 1px solid #ccc;
+    z-index: 50;
+}
+
+main {
+    position: relative;
+    margin-right: 270px;
+}
+
+details {
+    position: static;
+    display: block;
+    clear: both;
+    margin-top: 20px;
+}
+
+section:last-of-type {
+    margin-top: 30px;
+}
+
+/* 11. pseudoklasy (disabled,enabled,only-child,first) */
+input:enabled {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+input:disabled {
+    background-color: #1a8b1c;
+}
+aside p:only-child {
+    background-color: #7b00ff;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 250px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* @page uzywa pseudoklasy :first (Dla wydruku tej strony) */
+@page :first {
+    margin: 2cm;
+}
+
+
